@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  amlns:th="http://www.thymeleaf.org">
+	  <head>
+	  <meta charset="utf-8">
+	  </head>
+	  <body>
+	  <div align="center" >
+	  	  <br><hr>
+	  <table border="1">
+	  <thead>
+	  <tr>
+	  		<th>Employee Id</th>
+	  		<th>Employee Name</th>
+	  		<th>Employee Salary</th>
+	  </tr>
+	  </thead>
+	  <tbody>
+	  <tr th:each="e:${e2}">
+	  		<td th:text="${e.id}">Employee ID</td>
+	  		<td th:text="${e.name}">Employee Name</td>
+	  		<td th:text="${e.salary}">Employee Salary</td>
+	  </tr>
+	  </tbody>
+	  </table>
+	  </center>
+	  </div>
+	  </body>
+</html>			

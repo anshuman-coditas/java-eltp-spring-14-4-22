@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  amlns:th="http://www.thymeleaf.org">
+	  <head>
+	  <meta charset="utf-8">
+	  </head>
+	  <body>
+	  <div align="center" >
+	  <center><a href="/addEmployee">ADD NEW EMPLOYEE</a>
+	  <br><hr>
+	  <table border="1">
+	  <thead>
+	  <tr>
+	  		<th>Employee Id</th>
+	  		<th>Employee Name</th>
+	  		<th>Employee Salary</th>
+	  </tr>
+	  </thead>
+	  <tbody>
+	  <tr th:each="e:${e1}">
+	  		<td th:text="${e.id}">Employee ID</td>
+	  		<td th:text="${e.name}">Employee Name</td>
+	  		<td th:text="${e.salary}">Employee Salary</td>
+	  		<td><a th:href="@{'/edit/'+${e.id}}">EDIT</a></td>
+	  		<td><a th:href="@{'/delete/'+${e.id}}">DELETE</a></td>	
+	  		<
+	  </tr>
+	  </tbody>
+	  </table>
+	  </center>
+	  <a th:href="@{'/sort'}">GO</a>
+	  <a th:href="@{'/page'}">GO1</a>	
+	  </div>
+	  </body>
+</html>			
